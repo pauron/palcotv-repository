@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+	id="plugin.video.palcotv" version="0.2.6" name="palcoTV" provider-name="juarrox [juarrox@gmail.com]">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+        <import addon="plugin.video.youtube" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+                <platform>all</platform>
+		<summary lang="en">palcoTV</summary>
+		<summary lang="da">palcoTV</summary>
+		<description lang="en">Biblioteca online de listas XML y M3U de canales de TV de usuarios de la comunidad XBMC. Que lo disfrutes! ;)</description>
+		<website>http://seis0.blogspot.com</website>
+		<license>GPL 2.0</license>
+		<platform>all</platform>        
+		<language>en</language>
+	</extension>
+</addon>

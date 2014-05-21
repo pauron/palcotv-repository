@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.YourRepo" name="palcoTV Repository" version="1.0" provider-name="Juarrox">
+	<extension point="xbmc.addon.repository" name="palcoTV Addon Repository">
+		<info compressed="false">http://github.com/Juarrox/palcotv-repository/raw/master/addons.xml</info>
+		<checksum>http://github.com/Juarrox/palcotv-repository/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://github.com/Juarrox/palcotv-repository/raw/master/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install MY Addons</summary>
+		<description>Descarga e instala el addon palcoTV para XBMC. Para ayuda consulta en http://palcotv.blogspot.com.es</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
