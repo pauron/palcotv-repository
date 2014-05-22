@@ -1,19 +1,21 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.palcotv"
-    name="palcotv"
-    version="0.2.6"
-    provider-name="palcotv">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="plugin.video.palcotv"
+  version="0.2.6"
+  name="palcoTV"
+  provider-name="Juarrox">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+   <import addon="xbmc.python" version="2.1.0"/>
+   <import addon="script.common.plugin.cache" version="0.9.1"/>
   </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="es">palcoTV</summary>
-    <description lang="es">Biblioteca de listas de canales de televisión en formato M3U y XML</description>
-    <summary lang="en">TV on demand (Spanish)</summary>
-    <description lang="en">This plugin lets you watch inside XBMC TV channels.</description>
+    <summary>Play videos of different sports streaming sites</summary>
+    <description>Play videos of different sports streaming sites</description>
     <platform>all</platform>
   </extension>
 </addon>
