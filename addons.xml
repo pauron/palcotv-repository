@@ -21,7 +21,7 @@
   </extension>
 </addon>
 
-<addon id="repository.palcotv" name="palcoTV" version="1.0" provider-name="Juarrox">
+<addon id="repository.palcotv" name="palcoTV repository" version="1.0" provider-name="Juarrox">
 	<extension point="xbmc.addon.repository" name="palcoTV Addon Repository">
 		<info compressed="false">http://github.com/Juarrox/palcotv-repository/raw/master/addons.xml</info>
 		<checksum>http://github.com/Juarrox/palcotv-repository/raw/master/addons.xml.md5</checksum>
@@ -29,7 +29,7 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Instalacion de palcoTV</summary>
-		<description>Download and install palcoTV. Visit http://palcotv.blogspot.com.es</description>
+		<description>Repositorio de palcoTV para XBMC. Visita [COLOR royalblue]http://palcotv.blogspot.com.es[/COLOR]</description>
 		<platform>all</platform>
 	</extension>
 </addon>
