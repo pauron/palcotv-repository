@@ -2,7 +2,7 @@
 <addons>
 <addon
   id="plugin.video.palcotv"
-  version="0.2.62"
+  version="0.2.61"
   name="palcoTV"
   provider-name="Juarrox">
   <requires>
