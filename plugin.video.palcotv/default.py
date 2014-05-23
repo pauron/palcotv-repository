@@ -25,7 +25,7 @@ art = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.palcot
 playlists = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.palcotv/playlists', ''))
 tmp = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.palcotv/tmp', ''))
 icon = art + 'icon.png'
-fanart = art + 'fanart.png'
+fanart = art + 'fanart.jpg'
 
 
 # Entry point
@@ -60,7 +60,7 @@ def main_list(params):
     for entry in matches:
         title = plugintools.find_single_match(entry,'<title>(.*?)</title>')
         date = plugintools.find_single_match(entry,'<date>(.*?)</date>')
-        plugintools.add_item( action="" , title = title + date , fanart = art+'fanart.png' , thumbnail=art+'icon.png' , folder = False , isPlayable = False )
+        plugintools.add_item( action="" , title = title + date , fanart = art+'fanart.jpg' , thumbnail=art+'icon.png' , folder = False , isPlayable = False )
 
     data = plugintools.read("https://dl.dropboxusercontent.com/u/8036850/palcotvtest.xml")
     
@@ -75,15 +75,15 @@ def main_list(params):
         date = plugintools.find_single_match(entry,'<last_update>(.*?)</last_update>')
         if thumbnail == 'new.png':
             fixed = title
-            plugintools.add_item( action = action , plot = fixed , title = '[COLOR lightyellow]' + fixed + '[/COLOR]' , fanart = art+'fanart.png' , thumbnail = art + 'new.png' , url = url , folder = True , isPlayable = False )
+            plugintools.add_item( action = action , plot = fixed , title = '[COLOR lightyellow]' + fixed + '[/COLOR]' , fanart = art+'fanart.jpg' , thumbnail = art + 'new.png' , url = url , folder = True , isPlayable = False )
         else:
             if thumbnail == 'm3u.png':  # Control para listas M3U
                 fixed = title
-                plugintools.add_item( action = action , plot = fixed , title = '[COLOR skyblue]' + fixed + '[/COLOR]' , fanart = art+'fanart.png' , thumbnail = art + 'm3u.png' , url = url , folder = True , isPlayable = False )
+                plugintools.add_item( action = action , plot = fixed , title = '[COLOR skyblue]' + fixed + '[/COLOR]' , fanart = art+'fanart.jpg' , thumbnail = art + 'm3u.png' , url = url , folder = True , isPlayable = False )
 
             if thumbnail == 'special.png':  # Control para listas XML
                 fixed = title
-                plugintools.add_item( action = action , plot = fixed , title = '[COLOR lightyellow]' + fixed + '[/COLOR]' , fanart = art+'fanart.png' , thumbnail = art + 'm3u.png' , url = url , folder = True , isPlayable = False )
+                plugintools.add_item( action = action , plot = fixed , title = '[COLOR lightyellow]' + fixed + '[/COLOR]' , fanart = art+'fanart.jpg' , thumbnail = art + 'm3u.png' , url = url , folder = True , isPlayable = False )
                 
                          
 
@@ -429,16 +429,16 @@ def playlists_m3u(params):  # Biblioteca online
     subchannel = re.compile('<subchannel>([^<]+)<name>([^<]+)</name>([^<]+)<thumbnail>([^<]+)</thumbnail>([^<]+)<url>([^<]+)</url>([^<]+)</subchannel>').findall(data)
     for biny, ciny, diny, winy, pixy, dixy, boxy in subchannel:
         if ciny == "Vcx7 IPTV":
-            plugintools.add_item( action="getfile_http" , plot = ciny , title = '[COLOR lightyellow]' + ciny + '[/COLOR] ' + online , url= dixy , thumbnail = art + winy , fanart = art + 'fanart.png' , folder = True , isPlayable = False )
+            plugintools.add_item( action="getfile_http" , plot = ciny , title = '[COLOR lightyellow]' + ciny + '[/COLOR] ' + online , url= dixy , thumbnail = art + winy , fanart = art + 'fanart.jpg' , folder = True , isPlayable = False )
             title = ciny
         elif ciny == "Largo Barbate M3U":
-            plugintools.add_item( action="getfile_http" , plot = ciny , title = '[COLOR lightyellow]' + ciny + '[/COLOR] ' + online , url= dixy , thumbnail = art + winy , fanart = art + 'fanart.png' , folder = True , isPlayable = False )
+            plugintools.add_item( action="getfile_http" , plot = ciny , title = '[COLOR lightyellow]' + ciny + '[/COLOR] ' + online , url= dixy , thumbnail = art + winy , fanart = art + 'fanart.jpg' , folder = True , isPlayable = False )
             title = ciny
         elif ciny == "XBMC Mexico":
-            plugintools.add_item( action="getfile_http" , plot = ciny , title = '[COLOR lightyellow]' + ciny + '[/COLOR] ' + online , url= dixy , thumbnail = art + winy , fanart = art + 'fanart.png' , folder = True , isPlayable = False )
+            plugintools.add_item( action="getfile_http" , plot = ciny , title = '[COLOR lightyellow]' + ciny + '[/COLOR] ' + online , url= dixy , thumbnail = art + winy , fanart = art + 'fanart.jpg' , folder = True , isPlayable = False )
             title = ciny
         else:
-            plugintools.add_item( action="getfile_http" , plot = ciny , title = '[COLOR lightyellow]' + ciny + '[/COLOR] ' , url= dixy , thumbnail = art + winy , fanart = art + 'fanart.png' , folder = True , isPlayable = False )
+            plugintools.add_item( action="getfile_http" , plot = ciny , title = '[COLOR lightyellow]' + ciny + '[/COLOR] ' , url= dixy , thumbnail = art + winy , fanart = art + 'fanart.jpg' , folder = True , isPlayable = False )
             title = ciny
             
         
@@ -482,15 +482,15 @@ def parse_url(url):
     plugintools.log("url entrante= "+url)
 
     if url != "":
-        url = url.strip()
-        url = url.replace("rtmp://$OPT:rtmp-raw=", "")
-        url = url.replace("conn=S:OK", "")
-        url = url.replace("Conn=S:OK", "")
-        url = url.replace("Conn=S:OK --live", "")
-        url = url.replace("conn=S:OK --live", "")
-        url = url.replace("--live", "")
-        url = url.replace("-live", "")
-        url = url.strip()
+        # url = url.strip()
+        # url = url.replace("rtmp://$OPT:rtmp-raw=", "")
+        # url = url.replace("conn=S:OK", "")
+        # url = url.replace("Conn=S:OK", "")
+        # url = url.replace("Conn=S:OK --live", "")
+        # url = url.replace("conn=S:OK --live", "")
+        # url = url.replace("--live", "")
+        # url = url.replace("-live", "")
+        # url = url.strip()
         
         if url.find("timeout") >= 0:
                     url = url + ' timeout=15'  # En futuras versiones será modificable por el usuario

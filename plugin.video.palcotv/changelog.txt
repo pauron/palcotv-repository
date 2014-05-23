@@ -28,6 +28,11 @@ palcoTV 0.2.6
 - Corregidos muchos bugs y mejorado el parseado de listas
 
 
+palcoTV 0.2.61
+
+- Actualización crítica: Se corrige bug por el cuál no se reproducían muchos enlaces de tipo rtmp
+
+
 
 
 

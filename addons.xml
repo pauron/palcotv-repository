@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon
+  id="plugin.video.palcotv"
+  version="0.2.61"
+  name="palcoTV"
+  provider-name="Juarrox">
+  <requires>
+   <import addon="xbmc.python" version="2.1.0"/>
+   <import addon="script.common.plugin.cache" version="0.9.1"/>
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Biblioteca de listas M3U y XML de canales de televisión</summary>
+    <description>Biblioteca de listas M3U y XML de canales de televisión</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="repository.palcotv" name="palcoTV" version="1.0" provider-name="Juarrox">
 	<extension point="xbmc.addon.repository" name="palcoTV Addon Repository">
 		<info compressed="false">http://github.com/Juarrox/palcotv-repository/raw/master/addons.xml</info>
@@ -11,4 +33,4 @@
 		<platform>all</platform>
 	</extension>
 </addon>
-
+</addons>
