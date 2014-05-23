@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.palcotv"
-  version="0.2.61"
+  version="0.2.62"
   name="palcoTV"
   provider-name="Juarrox">
   <requires>
